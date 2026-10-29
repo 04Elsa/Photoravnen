@@ -457,6 +457,10 @@ a {
     margin-right: 20px;
 }
 
+.fa-brands.fa-linkedin {
+    margin-right: 0px;
+}
+
 a:hover {
     color: #d8d8d8;
 }
@@ -878,6 +882,13 @@ a:hover {
     top: 300px;
     right: 25%;
 }
+
+.hobby-link {
+    top: 300px;
+    right: 12%;
+}
+
+
 .text-hobby {
     display: flex;
     justify-content: center;
@@ -900,6 +911,27 @@ a:hover {
 
 /***** blandet fra Projekter end *****/
 
+.Image-om{
+    width: 40%;
+    display: flex;
+    margin-left: auto;
+    margin-right:90px;
+}
+
+.content-kontakt{
+    position: relative;
+    z-index: 2;
+    width: 50%;
+    margin-top: -150px;
+    margin-left: 30px;
+}
+.hero-kontakt {
+    position: relative;
+    height: 100vh;
+    background: #516650; /* Mørkegrøn */
+    overflow: hidden;
+    top:100px;
+}
 
 
 
