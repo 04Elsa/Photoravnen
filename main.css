@@ -652,6 +652,18 @@ a:hover {
     border-radius: 25px;
     z-index: 0;
 }
+.kort-række.med-baggrund-1x1::before {
+    content: "";
+    position: absolute;
+    top: -150px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90vw;
+    height: 820px;
+    background-color: #364835;
+    border-radius: 25px;
+    z-index: 0;
+}
 .kort-række.omvendt.med-baggrund::before {
     content: "";
     position: absolute;
@@ -659,7 +671,19 @@ a:hover {
     left: 50%;
     transform: translateX(-50%);
     width: 90vw;
-    height: 1020px;
+    height: 820px;
+    background-color: #364835;
+    border-radius: 25px;
+    z-index: 0;
+}
+.kort-række.omvendt.med-baggrund-1x1::before {
+    content: "";
+    position: absolute;
+    top: -30px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90vw;
+    height: 570px;
     background-color: #364835;
     border-radius: 25px;
     z-index: 0;
