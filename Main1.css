@@ -1,0 +1,1028 @@
+
+
+/*Blandet*/
+:root{
+    --white: rgb(229, 227, 227);
+    --dark: #111;
+    --darkGrey: #474b4f;
+    --lightGrey: #6b6e70;
+    --lightGreen: hsl(291, 100%, 50%);
+    --darkGreen: #00b6e8;
+    --transition: all 0.5s ease;
+}
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+body{
+    line-height: 1.6;
+    width: 100%;
+    max-width: 2000px;
+    margin: 0 auto;
+    overflow-x:hidden;
+
+}
+
+
+h1 {
+    font-size: clamp(24px, 4vw, 60px);
+}
+
+body {
+    padding: clamp(10px, 3vw, 40px);
+}
+img{
+    width: 100%;
+    display: block;
+    height:auto;
+}
+ul li{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+    color: #000;
+}
+h1,h3,h4{
+    margin: 15px 0;
+}
+h4{
+    font-size: 15px;
+}
+
+
+h2{
+    font-family: 'lilita one';
+    font-size: 30px;
+    font-weight: 10px;
+    text-align: center;
+    color: white;
+    font-style: normal;
+    
+}
+/*Blandet end*/
+
+
+
+
+/***** Navigation Utility Classes *****/
+
+/*Color on page name*/
+.active{
+    color:#364835!important;
+}
+
+/*kontakt bagground color*/
+.Snak{
+    background-color:#364835;
+    display: block;
+    padding: 6px;
+    padding-right: 20px;
+    padding-left: 20px;
+    border-radius: 20px;
+    margin-bottom: 20px;
+    margin-top: -4px;
+}
+/***** end of Navigation Utility Classes *****/
+
+
+
+
+/***** Header styling *****/
+.header{
+    min-height: 50vh;
+    background-color: #516650;
+    color: rgb(0, 0, 0);
+    max-height: 80vh;
+}
+
+/*navigation text*/
+.top-nav a{
+    color: #fff;
+    font-family: 'lilex';
+    white-space: 30;
+}
+
+/*Navigation opsætning*/
+.brand-and-navBtn{
+    background-color: rgb(0, 0, 0);
+    position: relative;z-index: 999;
+    height: 110px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: 500;
+    font-size: 24px;
+    padding: 15px 25px;
+    color:white;
+}
+
+/*Navigation hover color*/
+.navBtn:hover{
+    background: #fff;
+    color: #000;
+    transition: var(--transition);
+    position:relative;
+}
+
+/*Navigation padding*/
+.top-nav ul li{
+    padding: 10px 0;
+    position:relative;
+}
+
+/*Navtigation text and position*/
+.top-nav ul a{
+    position: relative;
+    font-weight: 500;
+    font-size: 18px;
+    text-align: center;
+    display: block;
+}
+
+/*Navigation effect*/
+.top-nav ul a::after{
+    content: "";
+    height: 2px;
+    background-color:#364835;
+    position: absolute;
+    bottom: -5px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    transition: var(--transition);
+    flex-shrink: 0;
+}
+.top-nav ul a:hover::after{
+    width: 100px;
+}
+
+
+/*Home page start*/
+
+
+/*Top text and image*/
+.start{
+    display: flex;
+    align-items: center; 
+    justify-content: space-between;
+    flex-shrink: 0;
+}
+.Image{
+    width: 50%;
+    display: flex;
+    margin-left: auto;
+    flex-shrink: 0;
+}
+.Name {
+    color: white;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    margin-left: 90px;
+    flex-shrink: 0;
+}
+
+h6{
+    font-size: 120px;
+    font-family:'lilita one'; 
+    line-height: 1.0;
+    margin-bottom: 10px;
+    font-weight: 60;
+    font-style: normal;
+    flex-shrink: 0;
+}
+
+h5{
+    font-size: 35px;
+    font-family:'Lilex';
+    font-style: normal;
+    font-optical-sizing: auto;
+    font-weight: 100;
+    flex-shrink: 0;
+}
+
+.code{
+    text-align:center;
+    flex-shrink: 0;
+}
+/*Top text and image end*/
+
+/***** end of Header *****/
+
+
+
+
+/* section one */
+
+/* Den store baggrundskasse */
+.hovedkasse {
+    background-color: #709668; /* Mørk baggrund */
+    color: #ffffff;
+    padding: 30px;
+    border-radius: 0px;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+    max-width: auto;
+    margin: 0px auto;
+    height: 540px;
+    flex-shrink: 0;
+  }
+
+  /*Text*/
+  .hovedkasse h2 {
+    margin-top: 0;
+    margin-top: 100px;
+    text-align: center;
+    margin-bottom: -70px;
+  }
+  
+  /* Flex-containeren til de 3 bokse indeni */
+  .boks-container {
+    display: flex;
+    gap: 60px;
+    padding-left: 100px;
+    padding-right: 100px;
+    flex-wrap: wrap; /* Mobilvenlig */
+    overflow: hidden; /* Vigtigt for afrundede hjørner */
+    position: relative;
+  }
+  
+  /* De 3 bokse */
+  .boks {
+    flex: 1 1 200px; /* Deler pladsen og hopper ned på mobil */
+    color: #333333;
+    text-align: center;
+    margin-top: 100px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Lidt skygge så de løfter sig */  
+    width: auto;
+    height: auto;
+    object-fit: cover; /* Beskærer billedet pænt, så det ikke bliver strkket */
+    display: block;
+    height:300px;
+    object-position: center;
+    overflow: hidden; /* Vigtigt for afrundede hjørner */
+    border-radius: 20px;;
+    border:10px solid #afd1a6; 
+}
+/* de 3 bokse end */
+
+/* section one end */
+
+/*Instagram side end*/
+
+/* section two */
+
+/* Generel opsætning af baggrund og skrifttype */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #516650; /* Mørkegrøn baggrundsfarve */
+    color: #ffffff;
+  }
+  
+  .timeline-container {
+    max-width: 900px;
+    margin: 90px auto;
+    padding: 40px 20px;
+    text-align: center;
+  }
+  
+  .timeline-container h2 {
+    font-size: 2.2rem;
+    font-weight: 800;
+    margin-bottom: 50px;
+  }
+  
+  /* Tidslinje container (Flexbox) */
+  .timeline {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  /* De enkelte trin */
+  .timeline-step {
+    font-family: 'Courier New', Courier, monospace; /* Monospace-stil som på billedet */
+    font-weight: bold;
+    font-size: 1.1rem;
+    white-space: nowrap;
+  }
+  
+  /* Linjerne mellem trinene */
+  .line-connector {
+    position: relative;
+    width: 60px;
+    height: 2px;
+    background-color: #ffffff;
+    margin: 0 15px;
+    flex-shrink: 0;
+  }
+  
+  /* Pil-indikatoren over linjen */
+  .line-connector.active .arrow {
+    position:absolute;
+    top: -55px;
+    left: 35%;
+    transform: translateX(-55%);
+    color: #cfc263; /* Lys gul/sandfarvet pil */
+    font-size: 2.3rem;
+    font-weight: bold;
+    padding-left: 50px;
+  }
+
+  /*Triangle boks*/
+  .hero {
+    position: relative;
+    height: 100vh;
+    background: #516650; /* Mørkegrøn */
+    overflow: hidden;
+}
+
+.triangle {
+    position: absolute;
+    inset: 0;
+
+    background: #7b9d6d; /* Lysegrøn */
+
+    clip-path: polygon(
+        0 30%,    /* venstre øverst */
+        100% 5%,  /* højre øverst */
+        100% 80%, /* højre nederst */
+        0 60%     /* venstre nederst */
+    );
+}
+
+.content {
+    position: relative;
+    z-index: 2;
+    width: 26%;
+    margin-top: 50px;
+    margin-left: 90px;
+}
+
+.about {
+    text-align:center;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 120px;
+    right: 50px;
+    left: 900px;
+}
+
+h1 {
+    font-family: 'Lilita one';
+    
+    
+}
+h4 {
+    font-family: 'Lilex';
+}
+  /*Triangle boks*/
+  
+
+
+/* Generel opsætning af baggrund og skrifttype */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #516650; /* Mørkegrøn baggrundsfarve */
+    color: #ffffff;
+  }
+  
+  .timeline-container {
+    max-width: 900px;
+    margin: 50px auto;
+    padding: 40px 20px;
+    text-align: center;
+  }
+  
+  .timeline-container h2 {
+    font-size: 2.2rem;
+    font-weight: 800;
+    margin-bottom: 50px;
+  }
+  
+  /* Tidslinje container (Flexbox) */
+  .timeline {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  /* De enkelte trin */
+  .timeline-step {
+    font-family: 'Courier New', Courier, monospace; /* Monospace-stil som på billedet */
+    font-weight: bold;
+    font-size: 1.1rem;
+    white-space: nowrap;
+  }
+  
+  /* Linjerne mellem trinene */
+  .line-connector {
+    position: relative;
+    width: 60px;
+    height: 2px;
+    background-color: #ffffff;
+    margin: 0 15px;
+    flex-shrink: 0;
+  }
+  
+  /* Pil-indikatoren over linjen */
+  .line-connector.active .arrow {
+    position: absolute;
+    top: -55px;
+    left: 35%;
+    transform: translateX(-50%);
+    color: #cfc263; /* Lys gul/sandfarvet pil */
+    font-size: 2.3rem;
+    font-weight: bold;
+  }
+/* section two end*/
+
+
+
+/*Section three*/
+
+/* social media Links */
+.kasse {
+    flex: 1 1 200px; /* Deler pladsen og hopper ned på mobil */
+    background-color: #afd1a6;
+    padding: 230px;
+    border-radius: 15px;
+    margin-top: 0px;
+    margin-left: 80px;
+    margin-right: 80px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Lidt skygge så de løfter sig */
+}
+
+.kasse2 {
+    text-align: center;
+    align-items: start;
+    position: relative;
+    top: -150px;
+    font-size: 30px;
+}
+a {
+    color: white;
+    font-size: 50px;
+    text-decoration: none;
+}
+
+
+.fa-brands {
+    margin-right: 20px;
+}
+
+.fa-brands.fa-linkedin {
+    margin-right: 0px;
+}
+
+a:hover {
+    color: #d8d8d8;
+}
+
+.service-kasse {
+    flex: 1 1 200px; /* Deler pladsen og hopper ned på mobil */
+    background-color: #7b9d6d;
+    padding: 230px;
+    border-radius: 15px;
+    margin-top: 100px;
+    margin-bottom: 100px;
+    margin-left: 80px;
+    margin-right: 80px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Lidt skygge så de løfter sig */
+}
+
+.service-kasse2 {
+    text-align: center;
+    align-items: start;
+    position: relative;
+    top: -200px;
+    font-size: 30px;
+    height: 100px;
+}
+
+.instagram{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    width: 100%;
+}
+.icon-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    width: 100%;
+}
+
+.icon-row img {
+    width: 90px;
+    height: 90px;
+    object-fit: contain;
+}
+.service-kasse3 {
+    flex: 1 1 200px; /* Deler pladsen og hopper ned på mobil */
+    background-color: #7b9d6d;
+    padding: 70px;
+    border-radius: 15px;
+    margin-top: 0px;
+    margin-bottom: 100px;
+    margin-left: 80px;
+    margin-right: 80px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Lidt skygge så de løfter sig */
+}
+.service-kasse4 {
+    text-align: center;
+    align-items: start;
+    position: relative;
+    top: -30px;
+    font-size: 30px;
+}
+.programmer{
+    font-size: 80px;
+    font-family: 'lilita';
+    padding-bottom: 80px;
+}
+
+.om-kasse {
+    flex: 1 1 200px; /* Deler pladsen og hopper ned på mobil */
+    background-color: #7b9d6d;
+    padding: 70px;
+    border-radius: 15px;
+    margin-top: 100px;
+    margin-bottom: 100px;
+    margin-left: 80px;
+    margin-right: 80px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Lidt skygge så de løfter sig */
+}
+.om-kasse2 {
+    text-align: center;
+    align-items: start;
+    position: relative;
+    top: -30px;
+    font-size: 30px;
+}
+/*Section three end*/
+
+/*****Home page end*****/
+
+
+/*****Projekter start*****/
+
+.Imageprojekt{
+    width: 40%;
+    display: flex;
+    margin-left: auto;
+    margin-right: 120px;
+}
+.Nameprojekt {
+    color: white;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    margin-left: 90px;
+    margin-bottom: 150px;
+}
+
+/* Den store baggrundskasse */
+.hovedkasseprojekt {
+    background-color: #709668; /* Mørk baggrund */
+    color: #ffffff;
+    padding: 30px;
+    border-radius: 0px;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+    max-width: auto;
+    margin: 0px auto;
+    height: 168px;
+    margin-top: 50px;
+  }
+
+/*****Projekter end*****/
+
+
+/*****service start*****/
+
+
+/*****service end******/
+
+
+/*****billedgalleri start*****/
+
+/*Top text and image*/
+.Imagegalleri{
+    width: 30%;
+    display: flex;
+    margin-left: auto;
+    margin-right: 120px;
+}
+.Namegalleri {
+    color: white;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    margin-left: 90px;
+    margin-bottom: 150px;
+}
+
+/* Den store baggrundskasse */
+.hovedkassegalleri {
+    background-color: #709668; /* Mørk baggrund */
+    color: #ffffff;
+    padding: 30px;
+    border-radius: 0px;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+    max-width: auto;
+    margin: 0px auto;
+    height: 168px;
+    margin-top: 50px;
+  }
+
+
+/*galleri start*/
+.kort-container {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    max-width: 1050px;
+    margin:0 auto;
+    margin-top: 200px;
+}
+
+.kort-række {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 110px;
+    margin-bottom: 150px;
+}
+.kort-række.med-baggrund::before {
+    content: "";
+    position: absolute;
+    top: -150px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90vw;
+    height: 1300px;
+    background-color: #364835;
+    border-radius: 25px;
+    z-index: 0;
+}
+.kort-række.med-baggrund-1x1::before {
+    content: "";
+    position: absolute;
+    top: -150px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90vw;
+    height: 820px;
+    background-color: #364835;
+    border-radius: 25px;
+    z-index: 0;
+}
+.kort-række.omvendt.med-baggrund::before {
+    content: "";
+    position: absolute;
+    top: -30px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90vw;
+    height: 820px;
+    background-color: #364835;
+    border-radius: 25px;
+    z-index: 0;
+}
+.kort-række.omvendt.med-baggrund-1x1::before {
+    content: "";
+    position: absolute;
+    top: -30px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90vw;
+    height: 570px;
+    background-color: #364835;
+    border-radius: 25px;
+    z-index: 0;
+}
+
+.kort-række.med-baggrund {
+    position: relative;
+}
+
+.årstal {
+    position: absolute;
+    top: -110px;
+    left: 380px;
+    margin: 0px;
+    color: white;
+    z-index: 2;
+    font-size: 50px;
+}
+.årstal-2 {
+    position: absolute;
+    top: -110px;
+    left: 450px;
+    margin: 0px;
+    color: white;
+    z-index: 2;
+    font-size: 50px;
+}
+
+.kort-række.omvendt {
+    flex-direction:row-reverse;
+}
+
+.billed-boks{
+    width:500px;
+    height:auto;
+    background-color: #2d412d;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    flex-shrink: 0;
+    position: relative;
+    z-index: 1;
+}
+
+.billed-boks img{
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    position: relative;
+    z-index: 1;
+}
+.tekst-boks h2 {
+    color: white;
+    font-family: 'lilita one';
+    font-size: 24px;
+    font-weight: bold;
+    margin: 0;
+    position: relative;
+    z-index: 1;
+}
+.tekst-boks p{
+    color: white;
+    font-family: 'lilex';
+    font-size: 15px;
+    margin: 0;
+    flex-direction: row-reverse;
+    position: relative;
+    z-index: 1;
+}
+
+/*galleri end*/
+
+
+
+/*****billedgalleri end******/
+
+
+/*****om start*****/
+
+
+/*****om end*****/
+
+
+/*****kontakt start*****/
+
+
+/*****kontakt end*****/
+
+
+
+/***** footer styling *****/
+.footer{
+    background-color:#709668;
+    color: #fff;
+    padding: 40px 0;
+    text-align: center;
+}
+.footer-container > div{
+    margin: 10px 0;
+}
+.footer-container h2{
+    color: var(--lightGreen);
+    font-size: 33px;
+    font-weight: 500;
+    letter-spacing: 7px;
+}
+.footer-container p{
+    opacity: 0.7;
+}
+.subs{
+    background: rgb(0, 0, 0);
+    width: 350px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 30px auto;
+}
+.sub i{
+    font-size: 26px;
+    flex: 10%;
+    display: block;
+}
+.subs input{
+    flex: 60%;
+    background: transparent;
+    border: none;
+    font-size: 16px;
+    padding: 0 5px;
+    outline: 0;
+    color: #fff;
+}
+.subs button{
+    flex: 30%;
+    font-size: 16px;
+    padding: 15px 0;
+    font-weight: bold;
+    background: var(--lightGreen);
+    border: none;
+    transition: var(--transition);
+    cursor: pointer;
+}
+.subs button:hover{
+    color: #fff;
+}
+.footer > p{
+    text-align: center;
+    font-size: 14px;
+}
+/***** end of footer *****/
+
+
+/***** blandet fra service *****/
+
+.hobby{
+    position:absolute;
+    text-align: center;
+    color: white;
+    font-family: 'lilita one';
+    font-size: 20px;
+}
+.icon-box{
+    width: 85px;
+    height: 85px;
+    background-color: #709668;
+    border-radius: 15px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto 10px;
+}
+
+.icon-box i {
+    font-size: 70px;
+    color: #ffffff;
+    background-color: transparent;
+}
+
+.hobby-photo{
+    top: 100px;
+    right: 22%;
+}
+
+.hobby-creative{
+    top: 200px;
+    right: 59%;
+}
+
+.hobby-brain {
+    top: 300px;
+    right: 25%;
+}
+
+.hobby-link {
+    top: 300px;
+    right: 12%;
+}
+
+
+.text-hobby {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto 10px;
+}
+/***** blandet fra service end *****/
+
+/***** blandet fra Projekter *****/
+
+.Baggrunds-farve{
+    background-color:#333333;
+    border-radius: 25px;
+    width: 95%;
+    height: 2000px;
+    margin: 0 auto;
+    position: absolute;
+    right: 30px;
+}
+
+/***** blandet fra Projekter end *****/
+
+.Image-om{
+    width: 40%;
+    display: flex;
+    margin-left: auto;
+    margin-right:90px;
+}
+
+.content-kontakt{
+    position: relative;
+    z-index: 2;
+    width: 50%;
+    margin-top: -150px;
+    margin-left: 30px;
+}
+.hero-kontakt {
+    position: relative;
+    height: 100vh;
+    background: #516650; /* Mørkegrøn */
+    overflow: hidden;
+    top:100px;
+}
+
+
+/* Computer */
+
+/* Mobil */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        gap: 15px;
+    }
+}
+
+/***** Media Queries *****/
+
+
+@media screen and (min-width: 992px) {
+    /* header and footer */
+    .nav-section{
+        display: flex;
+        justify-content: space-between;
+    }
+    .navBtn{
+        display: none;
+    }
+    .brand-and-navBtn{
+        flex: 0 0 10%;
+        background: none;
+    }
+    .top-nav{
+        flex: 0 1 80%;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        transition: transform 0s ease;
+        transform: translateY(0);
+        background: transparent;
+    }
+    .top-nav ul{
+        display: flex;
+    }
+    .top-nav ul li{
+        margin-right: 30px;
+        margin-left: 30px;
+    }
+
+
+    /* footer */   
+    .footer-container{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 20px;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    /* footer */
+    .footer-container > div{
+        width: 60%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+@media screen and (min-width: 800px) {
+    /* section two */
+    .insta-imgs{
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
