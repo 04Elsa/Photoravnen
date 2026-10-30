@@ -22,29 +22,32 @@
     <link rel="stylesheet" href="main.css">
 </head>
 <body>
-    <!--header-->
-    <header class="header">
-        <div class="nav-section">
-            <div class="brand-and-navBtn">
 
-                <span class="navBtn flex">
-                    <i class="fas fa-bars"></i>
-                </span>
-            </div>
-            <!--navigation menu-->
-            <nav class="top-nav">
-                <ul>
-                    <li><a href="index.html" class= "active">Home</a></li>
-                    <li><a href="projekter.html">Projekter</a></li>
-                    <li><a href="service.html">Service</a></li>
-                    <li><a href="billedgalleri.html">Billedgalleri</a></li>
-                    <li><a href="om.html">Om</a></li>
-                    <li><a href="kontakt.html" class="Snak">Lad os snakke</a></li>
+<!--header-->
+<header class="header">
+    <div class="nav-section">
+        <!-- 1. Checkboxen SKAL ligge lige før label og nav -->
+        <input type="checkbox" id="menu-toggle" class="menu-toggle">
+        
+        <!-- 2. Hamburger-knappen (label koblet til checkboxen via for="menu-toggle") -->
+        <label for="menu-toggle" class="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </label>
 
-                </ul>
-            </nav>
-
-        </div>
+        <!-- 3. Navigationen ligger som DIRKE SØSKENDE til input og label -->
+        <nav class="top-nav">
+            <ul>
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="projekter.html">Projekter</a></li>
+                <li><a href="service.html">Service</a></li>
+                <li><a href="billedgalleri.html">Billedgalleri</a></li>
+                <li><a href="om.html">Om</a></li>
+                <li><a href="kontakt.html" class="Snak">Lad os snakke</a></li>
+            </ul>
+        </nav>
+    </div>
 
 
         <section class="start">

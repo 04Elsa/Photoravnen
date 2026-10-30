@@ -1,7 +1,9 @@
 
+/* =========================================
+   1. GENERELLE INDSTILLINGER
+========================================= */
 
-/*Blandet*/
-:root{
+:root {
     --white: rgb(229, 227, 227);
     --dark: #111;
     --darkGrey: #474b4f;
@@ -10,351 +12,442 @@
     --darkGreen: #00b6e8;
     --transition: all 0.5s ease;
 }
-*{
-    padding: 0;
+
+* {
     margin: 0;
+    padding: 0;
     box-sizing: border-box;
     font-family: Arial, Helvetica, sans-serif;
 }
-body{
-    line-height: 1.6;
+
+html {
     width: 100%;
-    max-width: 2000px;
-    margin: 0 auto;
-    overflow-x:hidden;
-
-}
-
-
-h1 {
-    font-size: clamp(24px, 4vw, 60px);
+    overflow-x: hidden;
 }
 
 body {
-    padding: clamp(10px, 3vw, 40px);
-}
-img{
     width: 100%;
-    display: block;
-    height:auto;
+    max-width: 2000px;
+    margin: 0 auto;
+    padding: 0;
+    line-height: 1.6;
+    overflow-x: hidden;
+    background-color: #516650;
+    color: #ffffff;
 }
-ul li{
+
+img {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+}
+
+ul li {
     list-style: none;
 }
-a{
+
+a {
+    color: #ffffff;
+    font-size: 50px;
     text-decoration: none;
-    color: #000;
 }
-h1,h3,h4{
+
+a:hover {
+    color: #d8d8d8;
+}
+
+h1 {
+    font-family: 'Lilita One';
+    font-size: clamp(24px, 4vw, 60px);
+}
+
+h2 {
+    font-family: 'Lilita One';
+    font-size: 30px;
+    font-weight: normal;
+    text-align: center;
+    color: white;
+    font-style: normal;
+}
+
+h3,
+h4,
+h1 {
     margin: 15px 0;
 }
-h4{
+
+h4 {
+    font-family: 'Lilex';
     font-size: 15px;
 }
 
 
-h2{
-    font-family: 'lilita one';
-    font-size: 30px;
-    font-weight: 10px;
-    text-align: center;
-    color: white;
-    font-style: normal;
-    
-}
-/*Blandet end*/
+/* =========================================
+   2. NAVIGATION
+========================================= */
 
-
-
-
-/***** Navigation Utility Classes *****/
-
-/*Color on page name*/
-.active{
-    color:#364835!important;
+/* Aktiv side */
+.active {
+    color: #364835 !important;
 }
 
-/*kontakt bagground color*/
-.Snak{
-    background-color:#364835;
+/* Kontakt-knap */
+.Snak {
     display: block;
-    padding: 6px;
-    padding-right: 20px;
-    padding-left: 20px;
+    background-color: #364835;
+    padding: 6px 20px;
     border-radius: 20px;
-    margin-bottom: 20px;
     margin-top: -4px;
-}
-/***** end of Navigation Utility Classes *****/
-
-
-
-
-/***** Header styling *****/
-.header{
-    min-height: 50vh;
-    background-color: #516650;
-    color: rgb(0, 0, 0);
-    max-height: 80vh;
+    margin-bottom: 20px;
 }
 
-/*navigation text*/
-.top-nav a{
-    color: #fff;
-    font-family: 'lilex';
-    white-space: 30;
-}
-
-/*Navigation opsætning*/
-.brand-and-navBtn{
-    background-color: rgb(0, 0, 0);
-    position: relative;z-index: 999;
-    height: 110px;
+/* Navigation */
+.brand-and-navBtn {
+    position: relative;
+    z-index: 999;
     display: flex;
     justify-content: space-between;
-    align-items: center;
-    font-weight: 500;
+    height: 110px;
+    padding: 25px 25px;
+    background-color: #000000;
+    color: white;
     font-size: 24px;
-    padding: 15px 25px;
-    color:white;
-}
-
-/*Navigation hover color*/
-.navBtn:hover{
-    background: #fff;
-    color: #000;
-    transition: var(--transition);
-    position:relative;
-}
-
-/*Navigation padding*/
-.top-nav ul li{
-    padding: 10px 0;
-    position:relative;
-}
-
-/*Navtigation text and position*/
-.top-nav ul a{
-    position: relative;
     font-weight: 500;
-    font-size: 18px;
-    text-align: center;
-    display: block;
 }
 
-/*Navigation effect*/
-.top-nav ul a::after{
+.top-nav a {
+    color: #ffffff;
+    font-family: 'Lilex';
+    white-space: nowrap;
+}
+
+.top-nav ul li {
+    position: relative;
+    padding: 10px 0;
+}
+
+.top-nav ul a {
+    position: relative;
+    display: block;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+/* Hover-effekt på navigation */
+.top-nav ul a::after {
     content: "";
-    height: 2px;
-    background-color:#364835;
-    position: absolute;
+    position:absolute;
     bottom: -5px;
     left: 50%;
-    transform: translateX(-50%);
     width: 0;
+    height: 2px;
+    background-color: #364835;
+    transform: translateX(-50%);
     transition: var(--transition);
-    flex-shrink: 0;
 }
-.top-nav ul a:hover::after{
+
+.top-nav ul a:hover::after {
     width: 100px;
 }
 
+.navBtn:hover {
+    position: relative;
+    background: #ffffff;
+    color: #000000;
+    transition: var(--transition);
+}
 
-/*Home page start*/
 
 
-/*Top text and image*/
-.start{
+
+
+
+/* --- MOBIL: Standard tilstand (skjult) --- */
+.menu-toggle {
+    display: none;
+}
+
+.hamburger {
     display: flex;
-    align-items: center; 
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 21px;
+    cursor: pointer;
+    top:10px;
+    left:10px;
+    padding: 1px;
+    position: relative;
+    z-index: 1000;
+}
+
+.hamburger span {
+    display: block;
+    height: 4px;
+    width: 100%;
+    background-color: white;
+    border-radius: 2px;
+}
+
+.top-nav {
+    display: none; 
+    position: absolute;
+    top: 40px; /* Tilpas efter din headers højde */
+    left: 0;
+    width: 100%;
+    background-color: #4a5d4e;
+    padding: 30px 0;
+    z-index: 1000;
+    text-align: center;
+}
+
+.top-nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.top-nav ul li {
+    padding: 10px 0;
+    width: 100%;
+    text-align: center;
+}
+
+/* Når menuen er åben på mobil */
+.menu-toggle:checked ~ .top-nav {
+    display: block;
+}
+
+/* --- DESKTOP: Skærme over 768px (LigGER SIDST) --- */
+@media screen and (min-width: 768px) {
+    .hamburger, .menu-toggle {
+        display: none !important;
+    }
+    
+    .top-nav {
+        display: flex !important;
+        position: static !important;
+        background: transparent !important;
+        padding: 0 !important;
+        width: auto !important;
+        text-align: right !important;
+    }
+
+    .top-nav ul {
+        flex-direction: row !important;
+        gap: 25px !important;
+        align-items: right !important;
+        justify-content: flex-end !important;
+        width: auto !important;
+    }
+
+    .top-nav ul li {
+        width: auto !important;
+        padding: 0 !important;
+        text-align: right !important;
+        left:260px;
+    }
+    .Snak {
+    display: block;
+    background-color: #364835;
+    padding: 6px 20px;
+    border-radius: 20px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+
+}
+}
+
+
+
+
+/* =========================================
+   3. HEADER OG FORSIDE
+========================================= */
+
+.header {
+    min-height: 50vh;
+    max-height: 80vh;
+    background-color: #516650;
+    color: #000000;
+}
+
+/* Forsidens tekst og billede */
+.start {
+    display: flex;
+    align-items: center;
     justify-content: space-between;
     flex-shrink: 0;
 }
-.Image{
-    width: 50%;
+
+.Image {
     display: flex;
+    width: 50%;
     margin-left: auto;
     flex-shrink: 0;
 }
+
 .Name {
-    color: white;
-    text-align: left;
     display: flex;
     flex-direction: column;
     margin-left: 90px;
+    color: white;
+    text-align: left;
     flex-shrink: 0;
 }
 
-h6{
-    font-size: 120px;
-    font-family:'lilita one'; 
-    line-height: 1.0;
-    margin-bottom: 10px;
-    font-weight: 60;
-    font-style: normal;
-    flex-shrink: 0;
-}
-
-h5{
+h5 {
+    font-family: 'Lilex';
     font-size: 35px;
-    font-family:'Lilex';
     font-style: normal;
     font-optical-sizing: auto;
     font-weight: 100;
     flex-shrink: 0;
 }
 
-.code{
-    text-align:center;
+h6 {
+    margin-bottom: 10px;
+    font-family: 'Lilita One';
+    font-size: 120px;
+    font-weight: normal;
+    font-style: normal;
+    line-height: 1;
     flex-shrink: 0;
 }
-/*Top text and image end*/
 
-/***** end of Header *****/
-
-
-
-
-/* section one */
-
-/* Den store baggrundskasse */
-.hovedkasse {
-    background-color: #709668; /* Mørk baggrund */
-    color: #ffffff;
-    padding: 30px;
-    border-radius: 0px;
-    border-bottom-left-radius: 0px;
-    border-bottom-right-radius: 0px;
-    max-width: auto;
-    margin: 0px auto;
-    height: 540px;
-    flex-shrink: 0;
-  }
-
-  /*Text*/
-  .hovedkasse h2 {
-    margin-top: 0;
-    margin-top: 100px;
+.code {
     text-align: center;
+    flex-shrink: 0;
+}
+
+
+/* =========================================
+   4. FORSIDE - DE TRE BOKSE
+========================================= */
+
+.hovedkasse {
+    height: 540px;
+    margin: 150px auto;
+    padding: 30px;
+    background-color: #709668;
+    color: #ffffff;
+}
+
+.hovedkasse h2 {
+    margin-top: 100px;
     margin-bottom: -70px;
-  }
-  
-  /* Flex-containeren til de 3 bokse indeni */
-  .boks-container {
-    display: flex;
-    gap: 60px;
-    padding-left: 100px;
-    padding-right: 100px;
-    flex-wrap: wrap; /* Mobilvenlig */
-    overflow: hidden; /* Vigtigt for afrundede hjørner */
+    text-align: center;
+}
+
+.boks-container {
     position: relative;
-  }
-  
-  /* De 3 bokse */
-  .boks {
-    flex: 1 1 200px; /* Deler pladsen og hopper ned på mobil */
+    display: flex;
+    flex-wrap: wrap;
+    gap: 60px;
+    padding: 0 100px;
+    overflow: hidden;
+    flex-shrink: 0;
+}
+
+.boks {
+    display: block;
+    flex: 1 1 200px;
+    width: auto;
+    height: 300px;
+    margin-top: 100px;
+    overflow: hidden;
+    border: 10px solid #afd1a6;
+    border-radius: 20px;
+    background-color: transparent;
     color: #333333;
     text-align: center;
-    margin-top: 100px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Lidt skygge så de løfter sig */  
-    width: auto;
-    height: auto;
-    object-fit: cover; /* Beskærer billedet pænt, så det ikke bliver strkket */
-    display: block;
-    height:300px;
+    object-fit: cover;
     object-position: center;
-    overflow: hidden; /* Vigtigt for afrundede hjørner */
-    border-radius: 20px;;
-    border:10px solid #afd1a6; 
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
-/* de 3 bokse end */
 
-/* section one end */
 
-/*Instagram side end*/
+/* =========================================
+   5. TIDSLINJE
+========================================= */
 
-/* section two */
-
-/* Generel opsætning af baggrund og skrifttype */
-body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-    background-color: #516650; /* Mørkegrøn baggrundsfarve */
-    color: #ffffff;
-  }
-  
-  .timeline-container {
+.timeline-container {
     max-width: 900px;
-    margin: 90px auto;
-    padding: 40px 20px;
+    margin: 40px auto;
+    padding: 20px 20px;
     text-align: center;
-  }
-  
-  .timeline-container h2 {
+}
+
+.timeline-container h2 {
+    margin-bottom: 50px;
     font-size: 2.2rem;
     font-weight: 800;
-    margin-bottom: 50px;
-  }
-  
-  /* Tidslinje container (Flexbox) */
-  .timeline {
+}
+
+.timeline {
     display: flex;
     align-items: center;
     justify-content: center;
-    list-style: none;
-    padding: 0;
     margin: 0;
-  }
-  
-  /* De enkelte trin */
-  .timeline-step {
-    font-family: 'Courier New', Courier, monospace; /* Monospace-stil som på billedet */
-    font-weight: bold;
+    padding: 0;
+    list-style: none;
+}
+
+.timeline-step {
+    font-family: 'Courier New', Courier, monospace;
     font-size: 1.1rem;
+    font-weight: bold;
     white-space: nowrap;
-  }
-  
-  /* Linjerne mellem trinene */
-  .line-connector {
+}
+
+.line-connector {
     position: relative;
     width: 60px;
     height: 2px;
-    background-color: #ffffff;
     margin: 0 15px;
     flex-shrink: 0;
-  }
-  
-  /* Pil-indikatoren over linjen */
-  .line-connector.active .arrow {
-    position:absolute;
+    background-color: #ffffff;
+}
+
+/* Pil over tidslinjen */
+.line-connector.active .arrow {
+    position: absolute;
     top: -55px;
     left: 35%;
-    transform: translateX(-55%);
-    color: #cfc263; /* Lys gul/sandfarvet pil */
+    transform: translateX(-50%);
+    padding-left: 50px;
+    color: #cfc263;
     font-size: 2.3rem;
     font-weight: bold;
-    padding-left: 50px;
-  }
+}
 
-  /*Triangle boks*/
-  .hero {
+
+/* =========================================
+   6. TRIANGLE / HERO-SEKTION
+========================================= */
+
+.hero {
     position: relative;
-    height: 100vh;
-    background: #516650; /* Mørkegrøn */
+    height: 120vh;
     overflow: hidden;
+    background: #516650;
 }
 
 .triangle {
     position: absolute;
     inset: 0;
-
-    background: #7b9d6d; /* Lysegrøn */
-
+    background: #7b9d6d;
     clip-path: polygon(
-        0 30%,    /* venstre øverst */
-        100% 5%,  /* højre øverst */
-        100% 80%, /* højre nederst */
-        0 60%     /* venstre nederst */
+        0 30%,
+        100% 5%,
+        100% 80%,
+        0 60%
     );
 }
 
@@ -362,163 +455,63 @@ body {
     position: relative;
     z-index: 2;
     width: 26%;
-    margin-top: 50px;
+    padding-top:90px;
+    margin-top: -90px;
     margin-left: 90px;
 }
 
 .about {
-    text-align:center;
+    position: absolute;
+    top: 110px;
+    right: 50px;
+    left: 600px;
     display: flex;
     flex-direction: column;
-    position: absolute;
-    top: 120px;
-    right: 50px;
-    left: 900px;
-}
-
-h1 {
-    font-family: 'Lilita one';
-    
-    
-}
-h4 {
-    font-family: 'Lilex';
-}
-  /*Triangle boks*/
-  
-
-
-/* Generel opsætning af baggrund og skrifttype */
-body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-    background-color: #516650; /* Mørkegrøn baggrundsfarve */
-    color: #ffffff;
-  }
-  
-  .timeline-container {
-    max-width: 900px;
-    margin: 50px auto;
-    padding: 40px 20px;
     text-align: center;
-  }
-  
-  .timeline-container h2 {
-    font-size: 2.2rem;
-    font-weight: 800;
-    margin-bottom: 50px;
-  }
-  
-  /* Tidslinje container (Flexbox) */
-  .timeline {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    list-style: none;
-    padding: 0;
-    margin: 0;
-  }
-  
-  /* De enkelte trin */
-  .timeline-step {
-    font-family: 'Courier New', Courier, monospace; /* Monospace-stil som på billedet */
-    font-weight: bold;
-    font-size: 1.1rem;
-    white-space: nowrap;
-  }
-  
-  /* Linjerne mellem trinene */
-  .line-connector {
-    position: relative;
-    width: 60px;
-    height: 2px;
-    background-color: #ffffff;
-    margin: 0 15px;
-    flex-shrink: 0;
-  }
-  
-  /* Pil-indikatoren over linjen */
-  .line-connector.active .arrow {
-    position: absolute;
-    top: -55px;
-    left: 35%;
-    transform: translateX(-50%);
-    color: #cfc263; /* Lys gul/sandfarvet pil */
-    font-size: 2.3rem;
-    font-weight: bold;
-  }
-/* section two end*/
+}
 
 
+/* =========================================
+   7. SOCIALE MEDIER OG SERVICE
+========================================= */
 
-/*Section three*/
-
-/* social media Links */
+/* Sociale medier */
 .kasse {
-    flex: 1 1 200px; /* Deler pladsen og hopper ned på mobil */
-    background-color: #afd1a6;
+    flex: 1 1 200px;
+    margin: 0 60px;
     padding: 230px;
+    margin-bottom:100px;
+    height:80px;
     border-radius: 15px;
-    margin-top: 0px;
-    margin-left: 80px;
-    margin-right: 80px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Lidt skygge så de løfter sig */
+    background-color: #afd1a6;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .kasse2 {
-    text-align: center;
-    align-items: start;
     position: relative;
     top: -150px;
     font-size: 30px;
-}
-a {
-    color: white;
-    font-size: 50px;
-    text-decoration: none;
+    text-align: center;
+    align-items: start;
 }
 
-
+/* Ikoner */
 .fa-brands {
     margin-right: 20px;
 }
 
 .fa-brands.fa-linkedin {
-    margin-right: 0px;
+    margin-right: 0;
 }
 
-a:hover {
-    color: #d8d8d8;
-}
-
-.service-kasse {
-    flex: 1 1 200px; /* Deler pladsen og hopper ned på mobil */
-    background-color: #7b9d6d;
-    padding: 230px;
-    border-radius: 15px;
-    margin-top: 100px;
-    margin-bottom: 100px;
-    margin-left: 80px;
-    margin-right: 80px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Lidt skygge så de løfter sig */
-}
-
-.service-kasse2 {
-    text-align: center;
-    align-items: start;
-    position: relative;
-    top: -200px;
-    font-size: 30px;
-    height: 100px;
-}
-
-.instagram{
+.instagram {
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 20px;
     width: 100%;
 }
+
 .icon-row {
     display: flex;
     flex-direction: row;
@@ -533,134 +526,134 @@ a:hover {
     height: 90px;
     object-fit: contain;
 }
+
+/* Service-bokse */
+.service-kasse,
 .service-kasse3 {
-    flex: 1 1 200px; /* Deler pladsen og hopper ned på mobil */
-    background-color: #7b9d6d;
-    padding: 70px;
+    flex: 1 1 200px;
+    margin: 0 80px 100px;
     border-radius: 15px;
-    margin-top: 0px;
-    margin-bottom: 100px;
-    margin-left: 80px;
-    margin-right: 80px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Lidt skygge så de løfter sig */
-}
-.service-kasse4 {
-    text-align: center;
-    align-items: start;
-    position: relative;
-    top: -30px;
-    font-size: 30px;
-}
-.programmer{
-    font-size: 80px;
-    font-family: 'lilita';
-    padding-bottom: 80px;
+    background-color: #7b9d6d;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-.om-kasse {
-    flex: 1 1 200px; /* Deler pladsen og hopper ned på mobil */
-    background-color: #7b9d6d;
-    padding: 70px;
-    border-radius: 15px;
+.service-kasse {
     margin-top: 100px;
-    margin-bottom: 100px;
-    margin-left: 80px;
-    margin-right: 80px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Lidt skygge så de løfter sig */
+    padding: 230px;
 }
-.om-kasse2 {
+
+.service-kasse2 {
+    position: relative;
+    top: -200px;
+    height: 100px;
+    font-size: 30px;
     text-align: center;
     align-items: start;
+}
+
+.service-kasse3 {
+    margin-top: 0;
+    padding: 70px;
+}
+
+.service-kasse4 {
     position: relative;
     top: -30px;
     font-size: 30px;
+    text-align: center;
+    align-items: start;
 }
-/*Section three end*/
 
-/*****Home page end*****/
+/* Programmer */
+.programmer {
+    padding-bottom: 80px;
+    font-family: 'Lilita';
+    font-size: 80px;
+}
+
+/* Om-sektion */
+.om-kasse {
+    flex: 1 1 200px;
+    margin: 100px 80px;
+    padding: 70px;
+    border-radius: 15px;
+    background-color: #7b9d6d;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.om-kasse2 {
+    position: relative;
+    top: -30px;
+    font-size: 30px;
+    text-align: center;
+    align-items: start;
+}
 
 
-/*****Projekter start*****/
+/* =========================================
+   8. PROJEKTER
+========================================= */
 
-.Imageprojekt{
+.Imageprojekt {
+    display: flex;
     width: 40%;
-    display: flex;
     margin-left: auto;
     margin-right: 120px;
 }
+
 .Nameprojekt {
-    color: white;
-    text-align: left;
     display: flex;
     flex-direction: column;
     margin-left: 90px;
     margin-bottom: 150px;
+    color: white;
+    text-align: left;
 }
 
-/* Den store baggrundskasse */
 .hovedkasseprojekt {
-    background-color: #709668; /* Mørk baggrund */
-    color: #ffffff;
-    padding: 30px;
-    border-radius: 0px;
-    border-bottom-left-radius: 0px;
-    border-bottom-right-radius: 0px;
-    max-width: auto;
-    margin: 0px auto;
     height: 168px;
-    margin-top: 50px;
-  }
-
-/*****Projekter end*****/
-
-
-/*****service start*****/
+    margin: 190px auto 0;
+    padding: 30px;
+    background-color: #709668;
+    color: #ffffff;
+}
 
 
-/*****service end******/
+/* =========================================
+   9. BILLEDGALLERI
+========================================= */
 
-
-/*****billedgalleri start*****/
-
-/*Top text and image*/
-.Imagegalleri{
-    width: 30%;
+.Imagegalleri {
     display: flex;
+    width: 30%;
     margin-left: auto;
     margin-right: 120px;
 }
+
 .Namegalleri {
-    color: white;
-    text-align: left;
     display: flex;
     flex-direction: column;
     margin-left: 90px;
     margin-bottom: 150px;
+    color: white;
+    text-align: left;
 }
 
-/* Den store baggrundskasse */
 .hovedkassegalleri {
-    background-color: #709668; /* Mørk baggrund */
-    color: #ffffff;
-    padding: 30px;
-    border-radius: 0px;
-    border-bottom-left-radius: 0px;
-    border-bottom-right-radius: 0px;
-    max-width: auto;
-    margin: 0px auto;
     height: 168px;
-    margin-top: 50px;
-  }
+    margin: 50px auto 0;
+    padding: 30px;
+    background-color: #709668;
+    color: #ffffff;
+}
 
-
-/*galleri start*/
+/* Galleri-kort */
 .kort-container {
     display: flex;
     flex-direction: column;
     gap: 30px;
     max-width: 1050px;
-    margin:0 auto;
-    margin-top: 200px;
+    margin: 200px auto 0;
 }
 
 .kort-række {
@@ -670,243 +663,228 @@ a:hover {
     gap: 110px;
     margin-bottom: 150px;
 }
-.kort-række.med-baggrund::before {
-    content: "";
-    position: absolute;
-    top: -150px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 90vw;
-    height: 1300px;
-    background-color: #364835;
-    border-radius: 25px;
-    z-index: 0;
+
+.kort-række.omvendt {
+    flex-direction: row-reverse;
 }
-.kort-række.med-baggrund-1x1::before {
-    content: "";
-    position: absolute;
-    top: -150px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 90vw;
-    height: 820px;
-    background-color: #364835;
-    border-radius: 25px;
-    z-index: 0;
+
+/* Baggrunde bag kortene */
+.kort-række.med-baggrund,
+.kort-række.med-baggrund-1x1 {
+    position: relative;
 }
-.kort-række.omvendt.med-baggrund::before {
-    content: "";
-    position: absolute;
-    top: -30px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 90vw;
-    height: 820px;
-    background-color: #364835;
-    border-radius: 25px;
-    z-index: 0;
-}
+
+.kort-række.med-baggrund::before,
+.kort-række.med-baggrund-1x1::before,
+.kort-række.omvendt.med-baggrund::before,
 .kort-række.omvendt.med-baggrund-1x1::before {
     content: "";
     position: absolute;
-    top: -30px;
     left: 50%;
-    transform: translateX(-50%);
     width: 90vw;
-    height: 570px;
-    background-color: #364835;
     border-radius: 25px;
+    background-color: #364835;
+    transform: translateX(-50%);
     z-index: 0;
 }
 
-.kort-række.med-baggrund {
-    position: relative;
+.kort-række.med-baggrund::before {
+    top: -150px;
+    height: 1300px;
 }
 
-.årstal {
-    position: absolute;
-    top: -110px;
-    left: 380px;
-    margin: 0px;
-    color: white;
-    z-index: 2;
-    font-size: 50px;
+.kort-række.med-baggrund-1x1::before {
+    top: -150px;
+    height: 820px;
 }
+
+.kort-række.omvendt.med-baggrund::before {
+    top: -30px;
+    height: 820px;
+}
+
+.kort-række.omvendt.med-baggrund-1x1::before {
+    top: -30px;
+    height: 570px;
+}
+
+/* Årstal */
+.årstal,
 .årstal-2 {
     position: absolute;
     top: -110px;
-    left: 450px;
-    margin: 0px;
+    margin: 0;
     color: white;
-    z-index: 2;
     font-size: 50px;
+    z-index: 2;
 }
 
-.kort-række.omvendt {
-    flex-direction:row-reverse;
+.årstal {
+    left: 380px;
 }
 
-.billed-boks{
-    width:500px;
-    height:auto;
-    background-color: #2d412d;
-    border-radius: 20px;
+.årstal-2 {
+    left: 450px;
+}
+
+/* Billedboks */
+.billed-boks {
+    position: relative;
+    z-index: 1;
     display: flex;
     justify-content: center;
     align-items: center;
+    width: 500px;
+    height: auto;
     overflow: hidden;
     flex-shrink: 0;
-    position: relative;
-    z-index: 1;
+    border-radius: 20px;
+    background-color: #2d412d;
 }
 
-.billed-boks img{
+.billed-boks img {
+    position: relative;
+    z-index: 1;
     width: 100%;
     height: auto;
     object-fit: contain;
+}
+
+/* Tekst ved billeder */
+.tekst-boks h2 {
     position: relative;
     z-index: 1;
-}
-.tekst-boks h2 {
+    margin: 0;
     color: white;
-    font-family: 'lilita one';
+    font-family: 'Lilita One';
     font-size: 24px;
     font-weight: bold;
-    margin: 0;
+}
+
+.tekst-boks p {
     position: relative;
     z-index: 1;
-}
-.tekst-boks p{
+    margin: 0;
     color: white;
-    font-family: 'lilex';
+    font-family: 'Lilex';
     font-size: 15px;
-    margin: 0;
-    flex-direction: row-reverse;
-    position: relative;
-    z-index: 1;
 }
 
-/*galleri end*/
 
+/* =========================================
+   10. FOOTER
+========================================= */
 
-
-/*****billedgalleri end******/
-
-
-/*****om start*****/
-
-
-/*****om end*****/
-
-
-/*****kontakt start*****/
-
-
-/*****kontakt end*****/
-
-
-
-/***** footer styling *****/
-.footer{
-    background-color:#709668;
-    color: #fff;
+.footer {
     padding: 40px 0;
+    background-color: #709668;
+    color: #ffffff;
     text-align: center;
 }
-.footer-container > div{
+
+.footer-container > div {
     margin: 10px 0;
 }
-.footer-container h2{
+
+.footer-container h2 {
     color: var(--lightGreen);
     font-size: 33px;
     font-weight: 500;
     letter-spacing: 7px;
 }
-.footer-container p{
+
+.footer-container p {
     opacity: 0.7;
 }
-.subs{
-    background: rgb(0, 0, 0);
-    width: 350px;
+
+.subs {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    width: 350px;
     margin: 30px auto;
+    background: #000000;
 }
-.sub i{
-    font-size: 26px;
-    flex: 10%;
+
+.sub i {
     display: block;
+    flex: 10%;
+    font-size: 26px;
 }
-.subs input{
+
+.subs input {
     flex: 60%;
-    background: transparent;
-    border: none;
-    font-size: 16px;
     padding: 0 5px;
-    outline: 0;
-    color: #fff;
-}
-.subs button{
-    flex: 30%;
-    font-size: 16px;
-    padding: 15px 0;
-    font-weight: bold;
-    background: var(--lightGreen);
     border: none;
+    outline: 0;
+    background: transparent;
+    color: #ffffff;
+    font-size: 16px;
+}
+
+.subs button {
+    flex: 30%;
+    padding: 15px 0;
+    border: none;
+    background: var(--lightGreen);
+    font-size: 16px;
+    font-weight: bold;
     transition: var(--transition);
     cursor: pointer;
 }
-.subs button:hover{
-    color: #fff;
+
+.subs button:hover {
+    color: #ffffff;
 }
-.footer > p{
-    text-align: center;
+
+.footer > p {
     font-size: 14px;
-}
-/***** end of footer *****/
-
-
-/***** blandet fra service *****/
-
-.hobby{
-    position:absolute;
     text-align: center;
-    color: white;
-    font-family: 'lilita one';
-    font-size: 20px;
 }
-.icon-box{
-    width: 85px;
-    height: 85px;
-    background-color: #709668;
-    border-radius: 15px;
 
+
+/* =========================================
+   11. HOBBY OG IKONER
+========================================= */
+
+.hobby {
+    position: absolute;
+    color: white;
+    font-family: 'Lilita One';
+    font-size: 20px;
+    text-align: center;
+}
+
+.icon-box {
     display: flex;
     justify-content: center;
     align-items: center;
+    width: 85px;
+    height: 85px;
     margin: 0 auto 10px;
+    border-radius: 15px;
+    background-color: #709668;
 }
 
 .icon-box i {
-    font-size: 70px;
-    color: #ffffff;
     background-color: transparent;
+    color: #ffffff;
+    font-size: 65px;
 }
 
-.hobby-photo{
+.hobby-photo {
     top: 100px;
     right: 22%;
 }
 
-.hobby-creative{
-    top: 200px;
-    right: 59%;
+.hobby-creative {
+    top: 170px;
+    right: 49%;
 }
 
 .hobby-brain {
-    top: 300px;
-    right: 25%;
+    top: 270px;
+    right: 24%;
 }
 
 .hobby-link {
@@ -914,147 +892,118 @@ a:hover {
     right: 12%;
 }
 
-
 .text-hobby {
     display: flex;
     justify-content: center;
     align-items: center;
     margin: 0 auto 10px;
 }
-/***** blandet fra service end *****/
 
-/***** blandet fra Projekter *****/
 
-.Baggrunds-farve{
-    background-color:#333333;
-    border-radius: 25px;
+/* =========================================
+   12. PROJEKTER OG KONTAKT
+========================================= */
+
+.Baggrunds-farve {
+    position: absolute;
+    right: 30px;
     width: 95%;
     height: 2000px;
     margin: 0 auto;
-    position: absolute;
-    right: 30px;
+    border-radius: 25px;
+    background-color: #333333;
 }
 
-/***** blandet fra Projekter end *****/
-
-.Image-om{
-    width: 40%;
+.Image-om {
     display: flex;
+    width: 40%;
     margin-left: auto;
-    margin-right:90px;
+    margin-right: 90px;
 }
 
-.content-kontakt{
+/* Kontakt */
+.hero-kontakt {
+    position: relative;
+    top: 100px;
+    height: 100vh;
+    overflow: hidden;
+    background: #516650;
+}
+
+.content-kontakt {
     position: relative;
     z-index: 2;
     width: 50%;
     margin-top: -150px;
     margin-left: 30px;
 }
-.hero-kontakt {
-    position: relative;
-    height: 100vh;
-    background: #516650; /* Mørkegrøn */
-    overflow: hidden;
-    top:100px;
-}
 
 
-/* Computer */
+/* =========================================
+   13. RESPONSIVE DESIGN - TABLET
+========================================= */
 
-/* Mobil */
-@media (max-width: 768px) {
-    .container {
-        flex-direction: column;
-        gap: 15px;
-    }
-}
-
-/***** Media Queries *****/
-
-
+/* Navigation og footer på større skærme */
 @media screen and (min-width: 992px) {
-    /* header and footer */
-    .nav-section{
+
+    .nav-section {
         display: flex;
         justify-content: space-between;
     }
-    .navBtn{
+
+    .navBtn {
         display: none;
     }
-    .brand-and-navBtn{
+
+    .brand-and-navBtn {
         flex: 0 0 10%;
         background: none;
     }
-    .top-nav{
-        flex: 0 1 80%;
+
+    .top-nav {
         display: flex;
+        flex: 0 1 80%;
         justify-content: flex-end;
         align-items: center;
-        transition: transform 0s ease;
-        transform: translateY(0);
         background: transparent;
+        transform: translateY(0);
+        transition: transform 0s ease;
     }
-    .top-nav ul{
+
+    .top-nav ul {
         display: flex;
     }
-    .top-nav ul li{
-        margin-right: 30px;
-        margin-left: 30px;
+
+    .top-nav ul li {
+        margin: 0 30px;
     }
 
-
-    /* footer */   
-    .footer-container{
+    .footer-container {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         grid-gap: 20px;
     }
 }
 
-@media screen and (min-width: 1200px) {
-    /* footer */
-    .footer-container > div{
+/* Store skærme */
+@media screen and (min-width: 2000px) {
+
+    .footer-container > div {
         width: 60%;
         margin-left: auto;
         margin-right: auto;
     }
 }
+
+/* Tablet */
 @media screen and (min-width: 800px) {
-    /* section two */
-    .insta-imgs{
+
+    .insta-imgs {
         grid-template-columns: repeat(4, 1fr);
     }
 }
 
-
-/* =================================
-   RESPONSIVE DESIGN
-================================= */
-
-/* Generelle indstillinger */
-* {
-    box-sizing: border-box;
-}
-
-html {
-    width: 100%;
-    overflow-x: hidden;
-}
-
-body {
-    width: 100%;
-    max-width: 2000px;
-    padding: 0;
-    margin: 0 auto;
-}
-
-img {
-    max-width: 100%;
-    height: auto;
-}
-
-/* Bærbar og tablet */
+/* Bærbar og mindre skærme */
 @media screen and (max-width: 991px) {
 
     h6 {
@@ -1087,8 +1036,8 @@ img {
     }
 
     .boks-container {
-        padding: 20px;
         gap: 20px;
+        padding: 20px;
     }
 
     .boks {
@@ -1123,7 +1072,19 @@ img {
     }
 }
 
-/* Mobil */
+
+/* =========================================
+   14. RESPONSIVE DESIGN - MOBIL
+========================================= */
+
+@media screen and (max-width: 768px) {
+
+    .container {
+        flex-direction: column;
+        gap: 15px;
+    }
+}
+
 @media screen and (max-width: 600px) {
 
     body {
@@ -1157,8 +1118,8 @@ img {
     }
 
     .brand-and-navBtn {
-        height: auto;
         min-height: 75px;
+        height: auto;
         padding: 15px;
         font-size: 18px;
     }
@@ -1190,9 +1151,9 @@ img {
     }
 
     .boks-container {
-        padding: 0;
         flex-direction: column;
         gap: 20px;
+        padding: 0;
     }
 
     .boks {
@@ -1249,8 +1210,8 @@ img {
     .service-kasse3,
     .om-kasse {
         width: 90%;
-        padding: 30px 15px;
         margin: 25px auto;
+        padding: 30px 15px;
     }
 
     .kasse2,
@@ -1275,8 +1236,8 @@ img {
     }
 
     .programmer {
-        font-size: 35px;
         padding-bottom: 30px;
+        font-size: 35px;
     }
 
     a {
@@ -1321,17 +1282,18 @@ img {
         position: relative;
         top: auto;
         left: auto;
-        font-size: 30px;
         margin-bottom: 10px;
+        font-size: 30px;
     }
 
+    /* Baggrunde i galleriet */
     .kort-række.med-baggrund::before,
     .kort-række.med-baggrund-1x1::before,
     .kort-række.omvendt.med-baggrund::before,
     .kort-række.omvendt.med-baggrund-1x1::before {
         top: -15px;
-        height: calc(100% + 30px);
         width: 100%;
+        height: calc(100% + 30px);
     }
 
     /* Footer */
@@ -1348,17 +1310,18 @@ img {
     /* Baggrund */
     .Baggrunds-farve {
         position: relative;
+        right: auto;
         width: 95%;
         height: auto;
         min-height: 500px;
-        right: auto;
         margin: 0 auto;
     }
 
+    /* Kontakt */
     .hero-kontakt {
+        top: 0;
         height: auto;
         min-height: 600px;
-        top: 0;
     }
 
     .content-kontakt {
@@ -1366,6 +1329,7 @@ img {
         margin: 30px auto;
     }
 
+    /* Hobby */
     .hobby {
         position: relative;
         top: auto;

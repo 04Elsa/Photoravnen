@@ -1,5 +1,4 @@
 
-
 /*Blandet*/
 :root{
     --white: rgb(229, 227, 227);
@@ -1024,5 +1023,352 @@ a:hover {
     /* section two */
     .insta-imgs{
         grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+
+/* =================================
+   RESPONSIVE DESIGN
+================================= */
+
+/* Generelle indstillinger */
+* {
+    box-sizing: border-box;
+}
+
+html {
+    width: 100%;
+    overflow-x: hidden;
+}
+
+body {
+    width: 100%;
+    max-width: 2000px;
+    padding: 0;
+    margin: 0 auto;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Bærbar og tablet */
+@media screen and (max-width: 991px) {
+
+    h6 {
+        font-size: clamp(45px, 9vw, 90px);
+    }
+
+    h5 {
+        font-size: clamp(18px, 3vw, 30px);
+    }
+
+    .Name,
+    .Nameprojekt,
+    .Namegalleri {
+        margin-left: 20px;
+    }
+
+    .Image,
+    .Imageprojekt,
+    .Imagegalleri,
+    .Image-om {
+        width: 45%;
+        margin-right: 20px;
+    }
+
+    .hovedkasse,
+    .hovedkasseprojekt,
+    .hovedkassegalleri {
+        height: auto;
+        min-height: 168px;
+    }
+
+    .boks-container {
+        padding: 20px;
+        gap: 20px;
+    }
+
+    .boks {
+        min-width: 0;
+        height: 250px;
+    }
+
+    .about {
+        left: auto;
+        right: 20px;
+        width: 45%;
+    }
+
+    .content {
+        width: 45%;
+        margin-left: 30px;
+    }
+
+    .kort-række {
+        gap: 30px;
+    }
+
+    .billed-boks {
+        width: 45%;
+        min-width: 0;
+    }
+
+    .årstal,
+    .årstal-2 {
+        left: 20px;
+        font-size: 35px;
+    }
+}
+
+/* Mobil */
+@media screen and (max-width: 600px) {
+
+    body {
+        padding: 0;
+    }
+
+    h1 {
+        font-size: clamp(24px, 7vw, 40px);
+    }
+
+    h2 {
+        font-size: 24px;
+    }
+
+    h4 {
+        font-size: 14px;
+    }
+
+    h5 {
+        font-size: 18px;
+    }
+
+    h6 {
+        font-size: clamp(38px, 12vw, 65px);
+    }
+
+    /* Header */
+    .header {
+        min-height: auto;
+        max-height: none;
+    }
+
+    .brand-and-navBtn {
+        height: auto;
+        min-height: 75px;
+        padding: 15px;
+        font-size: 18px;
+    }
+
+    .start {
+        flex-direction: column;
+        gap: 20px;
+        padding: 30px 15px;
+    }
+
+    .Name {
+        margin: 0;
+        text-align: center;
+    }
+
+    .Image {
+        width: 100%;
+        margin: 0;
+    }
+
+    /* De tre bokse */
+    .hovedkasse {
+        height: auto;
+        padding: 25px 15px;
+    }
+
+    .hovedkasse h2 {
+        margin: 10px 0 25px;
+    }
+
+    .boks-container {
+        padding: 0;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .boks {
+        width: 100%;
+        height: auto;
+        min-height: 180px;
+        margin: 0;
+    }
+
+    /* Tidslinje */
+    .timeline-container {
+        margin: 30px auto;
+        padding: 20px 10px;
+    }
+
+    .timeline {
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+
+    .timeline-step {
+        font-size: 13px;
+        white-space: normal;
+    }
+
+    .line-connector {
+        width: 20px;
+        margin: 0;
+    }
+
+    /* Triangle og tekst */
+    .hero {
+        height: auto;
+        min-height: 650px;
+    }
+
+    .content {
+        width: 90%;
+        margin: 30px auto;
+    }
+
+    .about {
+        position: relative;
+        top: auto;
+        left: auto;
+        right: auto;
+        width: 90%;
+        margin: 30px auto;
+    }
+
+    /* Sociale medier og kasser */
+    .kasse,
+    .service-kasse,
+    .service-kasse3,
+    .om-kasse {
+        width: 90%;
+        padding: 30px 15px;
+        margin: 25px auto;
+    }
+
+    .kasse2,
+    .service-kasse2 {
+        position: relative;
+        top: 0;
+        font-size: 20px;
+    }
+
+    .service-kasse4 {
+        top: 0;
+        font-size: 20px;
+    }
+
+    .icon-row {
+        flex-wrap: wrap;
+    }
+
+    .icon-row img {
+        width: 55px;
+        height: 55px;
+    }
+
+    .programmer {
+        font-size: 35px;
+        padding-bottom: 30px;
+    }
+
+    a {
+        font-size: 25px;
+    }
+
+    /* Projekter og galleri */
+    .Imageprojekt,
+    .Imagegalleri,
+    .Image-om {
+        width: 100%;
+        margin: 0;
+    }
+
+    .Nameprojekt,
+    .Namegalleri {
+        margin: 0;
+    }
+
+    .kort-container {
+        width: 90%;
+        margin-top: 50px;
+    }
+
+    .kort-række,
+    .kort-række.omvendt {
+        flex-direction: column;
+        gap: 20px;
+        margin-bottom: 60px;
+    }
+
+    .billed-boks {
+        width: 100%;
+    }
+
+    .tekst-boks {
+        width: 100%;
+    }
+
+    .årstal,
+    .årstal-2 {
+        position: relative;
+        top: auto;
+        left: auto;
+        font-size: 30px;
+        margin-bottom: 10px;
+    }
+
+    .kort-række.med-baggrund::before,
+    .kort-række.med-baggrund-1x1::before,
+    .kort-række.omvendt.med-baggrund::before,
+    .kort-række.omvendt.med-baggrund-1x1::before {
+        top: -15px;
+        height: calc(100% + 30px);
+        width: 100%;
+    }
+
+    /* Footer */
+    .subs {
+        width: 90%;
+        max-width: 350px;
+    }
+
+    .footer-container h2 {
+        font-size: 25px;
+        letter-spacing: 3px;
+    }
+
+    /* Baggrund */
+    .Baggrunds-farve {
+        position: relative;
+        width: 95%;
+        height: auto;
+        min-height: 500px;
+        right: auto;
+        margin: 0 auto;
+    }
+
+    .hero-kontakt {
+        height: auto;
+        min-height: 600px;
+        top: 0;
+    }
+
+    .content-kontakt {
+        width: 90%;
+        margin: 30px auto;
+    }
+
+    .hobby {
+        position: relative;
+        top: auto;
+        right: auto;
+        margin: 20px;
     }
 }
