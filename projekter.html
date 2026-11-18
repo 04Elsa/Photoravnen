@@ -79,31 +79,62 @@
 
 
     <div class="kort-container">
-        <!--
-              Række 1: Billede til venstre, tekst til højre
+
+            <!-- Række 1: Billede til venstre, tekst til højre -->
         <div class="kort-række med-baggrund">
-            <h2 class="årstal">Hovedforløb 2</h2>
+            <h2 class="årstal">Emballagedesign</h2>
             <div class="billed-boks">
-                <img src="img/illu plante.png" alt="plante">
+                <img src="img/Stedet.jpg" alt="plante">
             </div>
             <div class="tekst-boks">
-                <h2>løve</h2>
-                <p>hsdbjfhsbj</p>
+                <h2>En åbning fortjener en særlig oplevelse</h2>
+                <p>I denne opgave skulle vi udvikle en emballage til åbningen af Stedet hvor emballagen skulle udgives som en lille gave.
+                    <br>
+                    <br>
+                    Krav til kontruktionen:
+                    <br>
+                    <br>
+                    - Stansetegningen skal opbygges i Illustrator, med korrekte skære- og falselinjer.
+                    <br>
+                    <br>
+                    - Dokumentstruktur og fi lnavngivning skal være korrekt og konsekvent.
+                    <br>
+                    <br>
+                    - Stansetegningen må maksimalt et A4 papir.
+                    <br>
+                    <br>
+                    - Den skal kunne indeholde 3 stk. Ferrero Rocher.
+                    <br>
+                    <br>
+                    - Emballagen må ikke anvende lim, tape, hæfteklammer eller andre former for hæftning.
+                    <br>
+                    <br>
+                    - Emballagen skal konstrueres med fokus på effektiv arkudnyttelse, transport og opbevaring.
+                    <br>
+                    <br>
+                    - Emballagen skal kunne produceres på baggrund af den udarbejdede stansetegning.
+                    <br>
+                    <br>
+                    <div class="clik">klik på billedet for at se alle billederne</div>
+                </p>
             </div>
         </div>
 
-        Række 2: Billed til højre, tekst til venstre (Brug klassen 'omvendt')
+        <!--Række 2: Billed til højre, tekst til venstre (Brug klassen 'omvendt')-->
         <div class="kort-række omvendt med-baggrund">
             <div class="billed-boks">
-                <img src="img/illu plante.png" alt="plante">
+                <img src="img/stands emballage.png" alt="plante">
             </div>
             <div class="tekst-boks">
-                <h2>løve</h2>
-                <p>hsdbjfhsbj</p>
+                <h2>Emballage til kronelys</h2>
+                <p>I denne opgave skulle vi udarbejde en standstegning til en emballage der kan holde to kronelys 
+                    <br>
+                    Selve emballagen skulle udarbejdes i Illustrator og skulle kunne samles uden brug af lim, tape eller andre hjælpemidler.
+                </p>
             </div>
         </div>
+    
 
-        -->
 
             <!--Række 1: Billede til venstre, tekst til højre-->
             <div class="kort-række">
@@ -129,24 +160,34 @@
             </div>
 
             <!--Række 1: Billede til venstre, tekst til højre-->
-        <div class="kort-række med-baggrund">
+        <div class="kort-række med-baggrund-oure">
             <h2 class="årstal">Skolerne i Oure</h2>
-            <div class="billed-boks">
-                <img src="img/illu plante.png" alt="plante">
+            <div class="billed-boks projekt-galleri">
+                <img src="img/Oure opgaver.png" alt="plante">
+                <img src="img/_MG_0220.jpg" alt="plante">
             </div>
             <div class="tekst-boks">
-                <h2>løve</h2>
-                <p>hsdbjfhsbj</p>
+                <h2>Opagver hos Skolerne i Oure</h2>
+                <p>I min tid som elev hos Skolerne i Oure fik jeg mulighed for at arbejde med forskellige projekter og aktiviteter, som hjalp mig med at udvikle mine færdigheder og kender til forskellige emner.
+                    <br>
+                    <br>
+                    Jeg har fået lov til at lave alt fra plakater, flyers, illustrationer, redigering af billeder og videoer, samt at arbejde med sociale medier og markedsføring.
+                    Udover dette fik jeg lov til at hjælpe med at opsætte deres nu nuværende hjemmeside.
+                </p>
             </div>
         </div>
         <!--Række 2: Billed til højre, tekst til venstre (Brug klassen 'omvendt')-->
-        <div class="kort-række omvendt med-baggrund">
+        <div class="kort-række omvendt med-baggrund-oure">
             <div class="billed-boks">
-                <img src="img/illu plante.png" alt="plante">
+                <img src="img/Screenshot 2026-11-18 at 11.05.20.png" alt="plante">
             </div>
             <div class="tekst-boks">
-                <h2>løve</h2>
-                <p>hsdbjfhsbj</p>
+                <h2>Fotograferinger</h2>
+                <p>Udover mange andre projekter har jeg også haft mulighed for at tage fotografier for Skolerne i Oure da jeg har en baggrund som fritidsfotograf.
+                    <br>
+                    <br>
+                    Jeg fik lov til at tage billeder af de forskellige aktiviteter og arrangementer, som fandt sted på skolen.
+                </p>
             </div>
         </div>
 
@@ -172,9 +213,27 @@
                 <p>hsdbjfhsbj</p>
             </div>
         </div>
-        
 
     </div>
+
+    </div> <!-- Lukker kort-container -->
+
+<!-- Billedgalleri / Lightbox -->
+<div id="lightbox" class="lightbox">
+    <span class="close" id="closeGallery">&times;</span>
+
+    <span class="arrow left" id="prevImage">&#10094;</span>
+
+    <img id="galleryImage" src="" alt="Stort projektbillede">
+
+    <span class="arrow right" id="nextImage">&#10095;</span>
+
+    <div class="image-counter" id="imageCounter"></div>
+</div>
+
+<script src="script.js"></script>
+
+
 
     <!--Galleri end-->
 

@@ -668,11 +668,15 @@ h6 {
     flex-direction: row-reverse;
 }
 
+/* =========================================
+Kort-række med baggrund emballage
+========================================= */
 /* Baggrunde bag kortene */
 .kort-række.med-baggrund,
 .kort-række.med-baggrund-1x1 {
     position: relative;
 }
+
 
 .kort-række.med-baggrund::before,
 .kort-række.med-baggrund-1x1::before,
@@ -700,13 +704,59 @@ h6 {
 
 .kort-række.omvendt.med-baggrund::before {
     top: -30px;
-    height: 820px;
+    height: 650px;
 }
 
 .kort-række.omvendt.med-baggrund-1x1::before {
     top: -30px;
     height: 570px;
 }
+/* =========================================
+Kort-række med baggrund Skolerne i Oure
+========================================= */
+/* Baggrunde bag kortene */
+.kort-række.med-baggrund,
+.kort-række.med-baggrund-1x1 {
+    position: relative;
+}
+
+
+.kort-række.med-baggrund-oure::before,
+.kort-række.med-baggrund-oure-1x1::before,
+.kort-række.omvendt.med-baggrund-oure::before,
+.kort-række.omvendt.med-baggrund-oure-1x1::before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    width: 90vw;
+    border-radius: 25px;
+    background-color: #364835;
+    transform: translateX(-50%);
+    z-index: 0;
+}
+
+.kort-række.med-baggrund-oure::before {
+    top: -150px;
+    height: 1300px;
+}
+
+.kort-række.med-baggrund-oure-1x1::before {
+    top: -150px;
+    height: 820px;
+}
+
+.kort-række.omvendt.med-baggrund-oure::before {
+    top: -30px;
+    height: 800px;
+}
+
+.kort-række.omvendt.med-baggrund-oure-1x1::before {
+    top: -30px;
+    height: 570px;
+}
+
+
+
 
 /* Årstal */
 .årstal,
@@ -748,7 +798,24 @@ h6 {
     width: 100%;
     height: auto;
     object-fit: contain;
+    cursor: pointer;
+    transition: transform 0.3s ease;
 }
+
+.billed-boks img:hover {
+    transform: scale(1.03);
+}
+
+.click {
+    position: relative;
+    z-index: 1;
+    margin: 0;
+    color: white;
+    font-family: 'Lilita One';
+    font-size: 24px;
+    font-weight: regular;
+}
+
 
 /* Tekst ved billeder */
 .tekst-boks h2 {
@@ -1335,5 +1402,193 @@ h6 {
         top: auto;
         right: auto;
         margin: 20px;
+    }
+}
+
+
+/* =========================================
+   10. BILLEDEGALLERI / LIGHTBOX
+========================================= */
+
+/* Baggrunden */
+.lightbox {
+    display: none;
+    position: fixed;
+    inset: 0;
+    z-index: 9999;
+
+    background: rgba(0, 0, 0, 0.94);
+
+    justify-content: center;
+    align-items: center;
+}
+
+/* Det store billede */
+.lightbox img {
+    max-width: 80%;
+    max-height: 80vh;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+    border-radius: 15px;
+}
+
+/* Luk-knap */
+.close {
+    position: absolute;
+    top: 20px;
+    right: 40px;
+
+    color: white;
+    font-size: 50px;
+    cursor: pointer;
+    z-index: 2;
+}
+
+/* Pile */
+.arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+
+    color: white;
+    font-size: 45px;
+    cursor: pointer;
+
+    padding: 20px;
+    user-select: none;
+    transition: color 0.2s;
+    z-index: 2;
+}
+
+.arrow:hover,
+.close:hover {
+    color: #aaa;
+}
+
+/* Placering af pile */
+.left {
+    left: 30px;
+}
+
+.right {
+    right: 30px;
+}
+
+/* Billednummer */
+.image-counter {
+    position: absolute;
+    bottom: 25px;
+    color: white;
+    font-size: 16px;
+}
+
+/* Mobilvisning */
+@media (max-width: 600px) {
+    .lightbox img {
+        max-width: 90%;
+    }
+
+    .arrow {
+        font-size: 30px;
+        padding: 10px;
+    }
+
+    .left {
+        left: 0;
+    }
+
+    .right {
+        right: 0;
+    }
+}
+
+/* Skjul ekstra billeder i projektboksen */
+.billed-boks img:not(:first-child) {
+    display: none;
+}
+
+/* Gør det første billede klikbart */
+.billed-boks img:first-child {
+    display: block;
+    cursor: pointer;
+}
+
+/* Lightbox skal ligge over hele hjemmesiden */
+.lightbox {
+    display: none;
+    position: fixed;
+    inset: 0;
+    z-index: 99999;
+    background: rgba(0, 0, 0, 0.619);
+    justify-content: center;
+    align-items: center;
+}
+
+.lightbox img {
+    max-width: 80vw;
+    max-height: 80vh;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+    border-radius: 15px;
+}
+
+.close {
+    position: absolute;
+    top: 20px;
+    right: 40px;
+    color: white;
+    font-size: 50px;
+    cursor: pointer;
+}
+
+.arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    color: white;
+    font-size: 45px;
+    padding: 20px;
+    cursor: pointer;
+    user-select: none;
+}
+
+.arrow:hover,
+.close:hover {
+    color: #aaa;
+}
+
+.left {
+    left: 30px;
+}
+
+.right {
+    right: 30px;
+}
+
+.image-counter {
+    position: absolute;
+    bottom: 25px;
+    color: white;
+    font-size: 16px;
+}
+
+@media (max-width: 600px) {
+    .lightbox img {
+        max-width: 90vw;
+    }
+
+    .arrow {
+        font-size: 30px;
+        padding: 10px;
+    }
+
+    .left {
+        left: 0;
+    }
+
+    .right {
+        right: 0;
     }
 }
