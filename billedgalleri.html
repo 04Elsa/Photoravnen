@@ -38,10 +38,10 @@
         <!-- 3. Navigationen ligger som DIRKE SØSKENDE til input og label -->
         <nav class="top-nav">
             <ul>
-                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="index.html">Home</a></li>
                 <li><a href="projekter.html">Projekter</a></li>
                 <li><a href="service.html">Service</a></li>
-                <li><a href="billedgalleri.html">Billedgalleri</a></li>
+                <li><a href="billedgalleri.html" class="active">Billedgalleri</a></li>
                 <li><a href="om.html">Om</a></li>
                 <li><a href="kontakt.html" class="Snak">Lad os snakke</a></li>
             </ul>
@@ -79,7 +79,7 @@
     <div class="kort-container">
 
         <!--Række 1: Billede til venstre, tekst til højre-->
-        <div class="kort-række med-baggrund">
+        <div class="kort-række med-baggrund-2026">
             <h2 class="årstal-2">2026</h2>
             <div class="billed-boks">
                 <img src="img/_MG_0180_SH facebook copy.jpg" alt="Maja">
@@ -98,7 +98,7 @@
             </div>
         </div>
         <!--Række 2: Billed til højre, tekst til venstre (Brug klassen 'omvendt')-->
-        <div class="kort-række omvendt med-baggrund">
+        <div class="kort-række omvendt med-baggrund-2026">
             <div class="billed-boks">
                 <img src="img/_MG_0182.jpg" alt="Maja">
             </div>
@@ -140,7 +140,7 @@
             </div>
 
             <!--Række 1: Billede til venstre, tekst til højre-->
-        <div class="kort-række med-baggrund">
+        <div class="kort-række med-baggrund-2024">
             <h2 class="årstal-2">2024</h2>
             <div class="billed-boks">
                 <img src="img/Lepzig.jpg" alt="Dyr">
@@ -151,7 +151,7 @@
             </div>
         </div>
         <!--Række 2: Billed til højre, tekst til venstre (Brug klassen 'omvendt')-->
-        <div class="kort-række omvendt med-baggrund">
+        <div class="kort-række omvendt med-baggrund-2024">
             <div class="billed-boks">
                 <img src="img/Alex-ved-vandet.jpg" alt="Alex">
             </div>
@@ -206,7 +206,20 @@
             </div>
         </div>
     </div>
+<!-- Billedgalleri / Lightbox -->
+<div id="lightbox" class="lightbox">
+    <span class="close" id="closeGallery">&times;</span>
 
+    <span class="arrow left" id="prevImage">&#10094;</span>
+
+    <img id="galleryImage" src="" alt="Stort projektbillede">
+
+    <span class="arrow right" id="nextImage">&#10095;</span>
+
+    <div class="image-counter" id="imageCounter"></div>
+</div>
+
+<script src="script.js"></script>
 
     <!--Galleri end-->
 

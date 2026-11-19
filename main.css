@@ -71,9 +71,17 @@ h2 {
     font-style: normal;
 }
 
+h0{
+    font-family: 'Lilita One';
+    font-size: 20px;
+    font-weight: normal;
+    text-align: left;
+    color: white;
+    font-style: normal;
+}
+
 h3,
-h4,
-h1 {
+h4{
     margin: 15px 0;
 }
 
@@ -333,7 +341,7 @@ h6 {
 
 .hovedkasse {
     height: 540px;
-    margin: 150px auto;
+    margin: 10px auto;
     padding: 30px;
     background-color: #709668;
     color: #ffffff;
@@ -359,7 +367,7 @@ h6 {
     display: block;
     flex: 1 1 200px;
     width: auto;
-    height: 300px;
+    height: 260px;
     margin-top: 100px;
     overflow: hidden;
     border: 10px solid #afd1a6;
@@ -418,8 +426,8 @@ h6 {
 /* Pil over tidslinjen */
 .line-connector.active .arrow {
     position: absolute;
-    top: -55px;
-    left: 35%;
+    top: -80px;
+    left: 50%;
     transform: translateX(-50%);
     padding-left: 50px;
     color: #cfc263;
@@ -454,7 +462,7 @@ h6 {
 .content {
     position: relative;
     z-index: 2;
-    width: 26%;
+    width: 35%;
     padding-top:90px;
     margin-top: -90px;
     margin-left: 90px;
@@ -462,9 +470,19 @@ h6 {
 
 .about {
     position: absolute;
-    top: 110px;
+    top: 150px;
     right: 50px;
-    left: 600px;
+    left: 700px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.about-kontakt {
+    position: absolute;
+    top: 105px;
+    right: 50px;
+    left: 800px;
     display: flex;
     flex-direction: column;
     text-align: center;
@@ -612,7 +630,14 @@ h6 {
 
 .hovedkasseprojekt {
     height: 168px;
-    margin: 190px auto 0;
+    margin: 10px auto 0;
+    padding: 30px;
+    background-color: #709668;
+    color: #ffffff;
+}
+.hovedkasseom {
+    height: 168px;
+    margin: 30px auto 0;
     padding: 30px;
     background-color: #709668;
     color: #ffffff;
@@ -641,7 +666,7 @@ h6 {
 
 .hovedkassegalleri {
     height: 168px;
-    margin: 50px auto 0;
+    margin: 22px auto 0;
     padding: 30px;
     background-color: #709668;
     color: #ffffff;
@@ -758,6 +783,96 @@ Kort-række med baggrund Skolerne i Oure
 
 
 
+
+/* =========================================
+Kort-række med baggrund 2026
+========================================= */
+/* Baggrunde bag kortene */
+.kort-række.med-baggrund,
+.kort-række.med-baggrund-1x1 {
+    position: relative;
+}
+
+
+.kort-række.med-baggrund-2026::before,
+.kort-række.med-baggrund-2026-1x1::before,
+.kort-række.omvendt.med-baggrund-2026::before,
+.kort-række.omvendt.med-baggrund-2026-1x1::before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    width: 90vw;
+    border-radius: 25px;
+    background-color: #364835;
+    transform: translateX(-50%);
+    z-index: 0;
+}
+
+.kort-række.med-baggrund-2026::before {
+    top: -150px;
+    height: 1300px;
+}
+
+.kort-række.med-baggrund-2026-1x1::before {
+    top: -150px;
+    height: 820px;
+}
+
+.kort-række.omvendt.med-baggrund-2026::before {
+    top: -30px;
+    height: 800px;
+}
+
+.kort-række.omvendt.med-baggrund-2026-1x1::before {
+    top: -30px;
+    height: 570px;
+}
+
+/* =========================================
+Kort-række med baggrund 2024
+========================================= */
+/* Baggrunde bag kortene */
+.kort-række.med-baggrund,
+.kort-række.med-baggrund-1x1 {
+    position: relative;
+}
+
+
+.kort-række.med-baggrund-2024::before,
+.kort-række.med-baggrund-2024-1x1::before,
+.kort-række.omvendt.med-baggrund-2024::before,
+.kort-række.omvendt.med-baggrund-2024-1x1::before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    width: 90vw;
+    border-radius: 25px;
+    background-color: #364835;
+    transform: translateX(-50%);
+    z-index: 0;
+}
+
+.kort-række.med-baggrund-2024::before {
+    top: -150px;
+    height: 1300px;
+}
+
+.kort-række.med-baggrund-2024-1x1::before {
+    top: -150px;
+    height: 820px;
+}
+
+.kort-række.omvendt.med-baggrund-2024::before {
+    top: -30px;
+    height: 800px;
+}
+
+.kort-række.omvendt.med-baggrund-2024-1x1::before {
+    top: -30px;
+    height: 570px;
+}
+
+
 /* Årstal */
 .årstal,
 .årstal-2 {
@@ -826,6 +941,16 @@ Kort-række med baggrund Skolerne i Oure
     font-family: 'Lilita One';
     font-size: 24px;
     font-weight: bold;
+}
+
+.tekst-boks h0 {
+    position: relative;
+    z-index: 1;
+    margin: 0;
+    color: white;
+    font-family: 'Lilex';
+    font-size: 15px;
+    font-weight:bold;
 }
 
 .tekst-boks p {
@@ -940,26 +1065,44 @@ Kort-række med baggrund Skolerne i Oure
 }
 
 .hobby-photo {
-    top: 100px;
-    right: 22%;
+    top: 120px;
+    right: 30%;
 }
 
 .hobby-creative {
-    top: 170px;
-    right: 49%;
+    top: 190px;
+    right: 59%;
 }
 
 .hobby-brain {
-    top: 270px;
-    right: 24%;
+    top: 290px;
+    right: 32%;
+}
+/* Hobby-ikonernes placering */
+
+.text-hobby {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto 10px;
 }
 
-.hobby-link {
+.hobby-photo-kontakt {
+    top: 120px;
+    right: 20%;
+}
+
+.hobby-creative-kontakt {
+    top: 160px;
+    right: 39%;
+}
+
+.hobby-link-kontakt {
     top: 300px;
     right: 12%;
 }
 
-.text-hobby {
+.text-hobby-kontakt {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -1100,6 +1243,7 @@ Kort-række med baggrund Skolerne i Oure
     .hovedkassegalleri {
         height: auto;
         min-height: 168px;
+
     }
 
     .boks-container {
@@ -1591,4 +1735,105 @@ Kort-række med baggrund Skolerne i Oure
     .right {
         right: 0;
     }
+}
+
+.billed-boks {
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+/* Sort lag oven på hele billedet */
+.billed-boks::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.656);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    pointer-events: none;
+    z-index: 1;
+}
+
+/* Vis det sorte lag ved hover */
+.billed-boks:hover::after {
+    opacity: 0.65;
+}
+
+/* Teksten oven på det sorte lag */
+.billed-boks::before {
+    content: "Tryk for at se mere";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    z-index: 2;
+    pointer-events: none;
+    text-align: center;
+    width: 100%;
+}
+
+/* Vis teksten ved hover */
+.billed-boks:hover::before {
+    opacity: 1;
+}
+
+
+
+
+
+
+.boks {
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+/* Sort lag på det enkelte billede */
+.boks::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: black;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    pointer-events: none;
+    z-index: 1;
+}
+
+.boks:hover::after {
+    opacity: 0.65;
+}
+
+/* Tekst på det enkelte billede */
+.boks::before {
+    content: "Tryk for at se mere";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    z-index: 2;
+    pointer-events: none;
+    text-align: center;
+    width: 100%;
+}
+
+.boks:hover::before {
+    opacity: 1;
+}
+
+.boks img {
+    display: block;
+    width: 100%;
+    height: auto;
 }
